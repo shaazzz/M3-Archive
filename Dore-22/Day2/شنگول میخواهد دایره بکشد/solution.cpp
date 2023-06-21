@@ -42,5 +42,11 @@ int main()
 	}
 	printf("2: %lli\n", ans % delta);
 
-	printf("3: %lli\n", (1LL << (log2(x) - 1)) * (1LL << (log2(x) - 1)) * 3 % delta);
+	ans = 0;
+	Loop(i, 1, log2(x - 1))
+	{
+		if (Bit(x, i))
+			ans += 3 * ((1 << (i - 1)) % delta) * ((1 << (i - 1)) % delta) % delta;
+	}
+	printf("3: %lli\n", ans% delta);
 }

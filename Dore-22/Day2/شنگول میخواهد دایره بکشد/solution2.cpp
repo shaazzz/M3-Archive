@@ -27,6 +27,14 @@ int main(){
 	ans += h * h * 3 % md;
 	ans %= md;
 	cout<<ans<<'\n';
+	lm -= 2;
+	res = 0;
+	for(ll j = 1 ; j < 50 ; j++){
+		if((1ll << j) & lm){
+			res += 3 * (1ll << (j - 1)) * (1ll << (j - 1)) % md;
+		}
+	}
+	res %= md;
 	cout<<res<<'\n';
 	return 0;
 }
