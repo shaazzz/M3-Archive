@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-const int DELTA = 10559;
+const int DELTA = 10427;
 
 namespace subtask1 {
     void solve(int n) {
